@@ -1,0 +1,15 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1217
+
+This script gives you direct access to perldoc documentation from inside VIM.
+Perldoc support is automatically activated when editing perl files.
+
+Requirements: "perl" v5.004 (or better) and "perldoc" must be accessible from your command line. Also, module Pod::Text::Termcap must be installed.
+
+Usage: After installing (see below), edit a perlfile, press <F3>, enter name of wanted perldoc-page.
+A new window is opened (presuming the wanted page exists), hopefully containing what you're looking for - a perldoc page, tuned up with some VIM syntaxhighlighting, generated from POD informations.
+
+Perldoc pages that have already been retrieved earlier are taken from cache.
+This speeds up the search and avoids double generation of VIM's synhighlight-commands.
+
+You'll need to specify a directory where the cached perldoc-pages will be stored. This is done in the 2nd line of pdoc4vim.vim (you'll be guided there automatically if a valid entry couldn't be found).
+Of course you can change the perldoc-key (default: F3) too, just check out the first lines from pdoc4vim.vim.
